@@ -1,0 +1,10 @@
+[  
+    {"ID": 1, "PartyName": "Computer Science Faculty Party",
+    "Description": "Fun times with students and all ND computer science faculty", "Time": "11:00 PM 2/10/2020"},
+    {"ID": 2, "PartyName": "Must be 5 chars",
+    "Description": "12345", "Time": "9:00 PM 2/15/2020"},
+    {"ID": 3, "PartyName": "Shrek Party",
+    "Description": "Shrek", "Time": "All Day Every Day"},
+    {"ID": 4, "PartyName": "Jenkins' Lit B-Day Bash",
+    "Description": "Help ya boi Fr. Jenkins celebrate his B-Day in style", "Time": "3:00 PM 12/17/2020"}
+]
