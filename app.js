@@ -5,51 +5,34 @@ angular.module('app').config(function ($routeProvider, $locationProvider) {
     $locationProvider.hashPrefix('')
 
     $routeProvider
-        .when('/home', {
+        .when('/', {
             templateUrl: 'pages/main.html',
-            controller: 'MainController'
+            controller: 'mainController'
         })
-        .when('/second', {
-            templateUrl: 'pages/second.html',
-            controller: 'second'
+        .when('/plan-party', {
+            templateUrl: 'pages/planParty.html',
+            controller: 'planPartyController'
+        })
+        .when('/view-parties', {
+            templateUrl: 'pages/viewParties.html',
+            controller: 'viewPartiesController'
         })
         .otherwise({
             templateUrl: 'pages/main.html',
-            controller: 'MainController'
+            controller: 'mainController'
         })
 })
 
-// Inline Annotation
-angular.module('app').controller('second', ['$scope', function ($scope) {
+angular.module('app').controller('mainController', ['$scope', function ($scope) {
 
-    // TODO: MOVE JSON DATA SOURCE TO A SERVICE ()
-    const data = {
-        american: ['pizza', 'burgers', 'hotdogs'],
-        desserts: ['ice cream', 'waffles']
-    }
-    $scope.data = data;
 }]);
 
-// Explicit dependency injection
-function MainController($scope) {
-    const data = {
-        american: ['pizza', 'burgers', 'hotdogs'],
-        desserts: ['ice cream', 'waffles']
-    }
-    $scope.data = data;
-}
-MainController.$inject = ['$scope']
-angular.module('app').controller('MainController', MainController)
+// Plan party controller
+angular.module('app').controller('planPartyController', ['$scope', function ($scope) {
 
-// Single Responsibility Principle (SRP)
+}]);
 
-// Separation of Concerns (SOC)
+// View parties controller
+angular.module('app').controller('viewPartiesController', ['$scope', function ($scope) {
 
-// Don't Repeat Yourself (DRY)
-
-// Consistent Naming
-
-// Clean code leads to:
-// Easier onboarding for new team members (or future self)
-// Easier debugging
-// Easier to maintain
+}]);
