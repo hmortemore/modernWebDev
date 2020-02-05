@@ -1,5 +1,6 @@
 angular.module('app', ['ngMaterial', 'ngRoute']);
 
+// Routing
 angular.module('app').config(function ($routeProvider, $locationProvider) {
 
     $locationProvider.hashPrefix('')
@@ -23,6 +24,7 @@ angular.module('app').config(function ($routeProvider, $locationProvider) {
         })
 })
 
+// Main controller
 angular.module('app').controller('mainController', ['$scope', function ($scope) {
 
 }]);
