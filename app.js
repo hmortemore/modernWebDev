@@ -1,4 +1,4 @@
-angular.module('app', ['ngMaterial', 'ngRoute']);
+var app = angular.module('app', ['ngMaterial', 'ngRoute']);
 
 // Routing
 angular.module('app').config(function ($routeProvider, $locationProvider) {
@@ -35,20 +35,24 @@ angular.module('app').controller('planPartyController', ['$scope', function ($sc
 }]);
 
 // View parties controller
-angular.module('app').controller('viewPartiesController', ['$scope', function ($scope) {
-
+angular.module('app').controller('viewPartiesController', ['$scope', 'partyService', function ($scope, partyService) {
+    partyService.getParties().then(function (result) {
+                console.log('works');
+                //$scope.result = result;
+                console.log(result.data);
+                $scope.parties = result.data
+        	})
+        	.catch(function (data, status) {
+                console.log(data);
+        	});
 }]);
 
 // Party Service
-app.service('partyService', function(){
+app.service('partyService', ['$http', function($http){
 	this.getParties = function(){
-		$http.get('database.json')
-    	    .success(function (result) {
-        	    return result;
-        	})
-        	.error(function (data, status) {
-        	    console.log(data);
-				return [];
-        	});
+		return $http.get('database.json')
+    	    
+//        console.log('response = ', response);
+//        return response;
 	}
-}
+}]);
