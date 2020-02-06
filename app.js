@@ -38,3 +38,17 @@ angular.module('app').controller('planPartyController', ['$scope', function ($sc
 angular.module('app').controller('viewPartiesController', ['$scope', function ($scope) {
 
 }]);
+
+// Party Service
+app.service('partyService', function(){
+	this.getParties = function(){
+		$http.get('database.json')
+    	    .success(function (result) {
+        	    return result;
+        	})
+        	.error(function (data, status) {
+        	    console.log(data);
+				return [];
+        	});
+	}
+}
