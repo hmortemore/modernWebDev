@@ -1,10 +1,34 @@
 [  
-    {"ID": 1, "PartyName": "Computer Science Faculty Party",
-    "Description": "Fun times with students and all ND computer science faculty", "Time": "11:00 PM 2/10/2020"},
-    {"ID": 2, "PartyName": "Must be 5 chars",
-    "Description": "12345", "Time": "9:00 PM 2/15/2020"},
-    {"ID": 3, "PartyName": "Shrek Party",
-    "Description": "Shrek", "Time": "All Day Every Day"},
-    {"ID": 4, "PartyName": "Jenkins' Lit B-Day Bash",
-    "Description": "Help ya boi Fr. Jenkins celebrate his B-Day in style", "Time": "3:00 PM 12/17/2020"}
+    {
+        "id": 1,
+        "name": "Computer Science Faculty Party",
+        "description": "Fun times with students and all ND computer science faculty", 
+        "time": "11:00 PM",  
+        "date": "2/10/2020", 
+        "address": "123 Main St."
+    },
+    {
+        "id": 2, 
+        "name": "Must be 5 chars",
+        "description": "12345", 
+        "time": "9:00 PM", 
+        "date": "2/10/2020", 
+        "address": "123 Main St."
+    },
+    {
+        "id": 3, 
+        "name": "Shrek Party",
+        "description": "Shrek", 
+        "time": "9:00 PM", 
+        "date": "2/10/2020", 
+        "address": "123 Main St."
+    },
+    {
+        "id": 4, 
+        "name": "Jenkins' Lit B-Day Bash",
+        "description": "Help ya boi Fr. Jenkins celebrate his B-Day in style", 
+        "time": "3:00 PM", 
+        "date": "2/10/2020", 
+        "address": "123 Main St." 
+    }
 ]
