@@ -8,7 +8,11 @@ html, body {
   overflow-x: hidden;
   font-family: 'Lato', sans-serif;
   color: #FFF;
-  background-color: #16171B;
+  background-color: #1F2128;
+}
+
+.navbar {
+  background-color: #272B33;
 }
 
 #main {
@@ -27,13 +31,11 @@ html, body {
 
 h1 {
   font-size: 700%;
-  line-height: 1.2;
 }
 
 h3 {
-  font-size: 260%;
+  font-size: 250%;
   font-weight: 500;
-  line-height: 1.2;
 }
 
 .btn-lg {
@@ -47,11 +49,11 @@ h3 {
 /* Party Card Styles */ 
 
 .card {
-  background-color: #202125;
+  background-color: #272B33;
 }
 
 .card-text {
-  color: #535458;
+  color: #6A6C7B;
 }
 
 .card-body .btn {
