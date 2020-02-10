@@ -1,2 +1,22 @@
-<div> Viewing parties page </div>
-<div>{{parties}}</div>
+<div class="container">
+  <div class="row">
+    <div ng-repeat="party in parties" class="col-md-6 col-lg-4">
+      <div class="card text-center mt-3">
+        <div class="card-body">
+          <h5 class="card-title">{{party.name}}</h5>
+          <p class="card-text">{{party.description}}</p>
+          <div class="row mb-2">
+            <div class="col">
+              <p class="card-text"><i class="far fa-clock"></i> {{party.time}}</p>
+            </div>
+            <div class="col">
+              <p class="card-text"><i class="far fa-calendar-alt"></i> {{party.date}}</p>
+            </div>
+          </div>
+          <p class="card-text"><i class="fas fa-map-marker-alt"></i> {{party.address}}</p>
+          <a href="" class="btn btn-primary" role="button">View Party</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

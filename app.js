@@ -38,7 +38,6 @@ angular.module('app').controller('planPartyController', ['$scope', function ($sc
 angular.module('app').controller('viewPartiesController', ['$scope', 'partyService', function ($scope, partyService) {
     partyService.getParties().then(function (result) {
                 console.log('works');
-                //$scope.result = result;
                 console.log(result.data);
                 $scope.parties = result.data
         	})
@@ -51,8 +50,5 @@ angular.module('app').controller('viewPartiesController', ['$scope', 'partyServi
 app.service('partyService', ['$http', function($http){
 	this.getParties = function(){
 		return $http.get('database.json')
-    	    
-//        console.log('response = ', response);
-//        return response;
 	}
 }]);
