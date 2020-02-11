@@ -18,7 +18,7 @@ html, body {
 }
 
 #main {
-  background: url(images/landing-background.jpg) no-repeat 50% 50%;
+  background: url(images/landing-background.png) no-repeat 50% 50%;
   display: table;
   height: 100vh;
   width: 100%;
@@ -33,6 +33,7 @@ html, body {
 
 h1 {
   font-size: 700%;
+  text-shadow: 0 0 10px #1DB075;
 }
 
 h3 {
