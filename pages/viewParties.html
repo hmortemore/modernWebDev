@@ -1,9 +1,12 @@
 <div class="container">
+
+  <!-- Search Bar -->
   <div>
       <br>
-      <label>Search:</label>
-      <input id="searchInput" ng-model="searchInput">
+      <input type="text" class="form-control col-3" id="searchInput" placeholder="Search" ng-model="searchInput">
   </div>
+
+  <!-- Party Card for each party-->
   <div class="row">
     <div ng-repeat="party in parties | filter:searchInput" class="col-md-6 col-lg-4">
       <div class="card text-center mt-3">
@@ -24,4 +27,5 @@
       </div>
     </div>
   </div>
+
 </div>
