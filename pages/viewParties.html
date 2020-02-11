@@ -1,6 +1,11 @@
 <div class="container">
+  <div>
+      <br>
+      <label>Search:</label>
+      <input id="searchInput" ng-model="searchInput">
+  </div>
   <div class="row">
-    <div ng-repeat="party in parties" class="col-md-6 col-lg-4">
+    <div ng-repeat="party in parties | filter:searchInput" class="col-md-6 col-lg-4">
       <div class="card text-center mt-3">
         <div class="card-body">
           <h5 class="card-title">{{party.name}}</h5>
