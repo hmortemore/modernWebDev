@@ -1,8 +1,14 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:400,700&display=swap');
 
-/* TODO: clean up styles, separate to different CSS files
-  TODO: use CSS variables for colors
-*/
+/* TODO: clean up styles, separate to different CSS files*/
+
+:root {
+  --main-bg-color: #1F2128;
+  --secondary-bg-color: #272B33;
+  --main-accent-color: #155E8E; /*#1DB075;*/
+  --secondary-accent-color: #0A4C78; /*179360;*/ 
+  --main-text-color: #6A6C7B;
+}
 
 html, body {
   height: 100%;
@@ -10,11 +16,11 @@ html, body {
   overflow-x: hidden;
   font-family: 'Lato', sans-serif;
   color: #FFF;
-  background-color: #1F2128;
+  background-color: var(--main-bg-color);
 }
 
 .navbar {
-  background-color: #272B33;
+  background-color: var(--secondary-bg-color);
 }
 
 #main {
@@ -50,46 +56,46 @@ h3 {
 
 /* Party Card Styles */ 
 .card {
-  background-color: #272B33;
+  background-color: var(--secondary-bg-color);
 }
 
 .card-text {
-  color: #6A6C7B;
+  color: var(--main-text-color);
 }
 
 .card-body .btn {
-  background-color: #1DB075;
-  border-color: #1DB075;
+  background-color: var(--main-accent-color);
+  border-color: var(--main-accent-color);
 }
 
 .card-body .btn:hover{
-  background-color: #179360;
-  border-color: #179360;
+  background-color: var(--secondary-accent-color);
+  border-color: var(--secondary-accent-color);
 }
 
 i {
-  color: #1DB075;
+  color: var(--main-accent-color);
 }
 
 /* Plan party styles */
 input[type=text], input[type=text]:focus, textarea{
-  background-color: #272B33;
-  background: #272B33 !important;
+  background-color: var(--secondary-bg-color);
+  background: var(--secondary-bg-color) !important;
   color: white;
 }
 
 input[type=text]:focus{
   box-shadow: none;
   border: 0;
-  border: 2px solid #1DB075;
+  border: 2px solid var(--main-accent-color);
 }
 
 button[type=submit]{
-  background-color: #1DB075;
-  border-color: #1DB075;
+  background-color: var(--main-accent-color);
+  border-color: var(--main-accent-color);
 }
 
 button[type=submit]:hover{
-  background-color: #179360;
-  border-color: #179360;
+  background-color: var(--secondary-accent-color);
+  border-color: var(--secondary-accent-color);
 }
