@@ -33,6 +33,7 @@ var argv = yargs.argv,
     modules = ['@uirouter/angularjs/release/angular-ui-router.js',
     'parse/dist/parse.min.js',
     'angular-parse/angular-parse.js',
+	'@uirouter/visualizer/bundles/visualizer.min.js'
   ]; // these are 3rd party libraries in the node_modules folder NOT *.module.js files
 
 /* utility function to generate Unix DateTime Stamp */
@@ -110,7 +111,7 @@ gulp.task('modules', ['templates'], () => {
     return gulp.src(modules.map(item => 'node_modules/' + item))
         .pipe(concat('vendor.js'))
         .pipe(gulpif(argv.deploy, uglify()))
-        .pipe(plumber())
+        //.pipe(plumber())
         .pipe(gulp.dest(dist + '/js/'));
 });
 gulp.task('modules', ['templates'], () => {
@@ -119,7 +120,7 @@ gulp.task('modules', ['templates'], () => {
     gulp
         .src(modules.map(item => 'node_modules/' + item))
         .pipe(gulpif(argv.deploy, stripDebug()))
-        .pipe(plumber())
+        //.pipe(plumber())
         .pipe(gulpif(!argv._.length, sourcemaps.init({
             loadMaps: true
         })))
@@ -151,7 +152,7 @@ gulp.task('scripts', ['modules'], function () {
     gulp
         .src(['src/app/**/*.module.js', scripts, './templates.js'])
         .pipe(gulpif(argv.deploy, stripDebug()))
-        .pipe(plumber())
+        //.pipe(plumber())
         .pipe(gulpif(!argv._.length, sourcemaps.init({
             loadMaps: true
         })))
