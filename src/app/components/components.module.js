@@ -1,4 +1,5 @@
 angular
 	.module('components', [
-		'components.main',
+		'components.home',
+		'components.plan',
 	]);
