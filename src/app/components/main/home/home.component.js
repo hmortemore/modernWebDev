@@ -9,13 +9,8 @@ angular
   .config(function ($stateProvider, $urlRouterProvider){
     $stateProvider
       .state('main', {
-        redirectTo: 'main.home',
-        url: '/main',
-        template: '<div ui-view></div>'
-      })
-      .state('main.home', {
-        url: '/home',
+        url: '/',
         component: 'home'
       });
-    $urlRouterProvider.otherwise('/main/home');
+    $urlRouterProvider.otherwise('/');
   });
