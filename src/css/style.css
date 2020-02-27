@@ -23,7 +23,7 @@ html, body {
   background-color: var(--secondary-bg-color);
 }
 
-#main {
+#home {
   background: url(images/landing-background.png) no-repeat 50% 50%;
   display: table;
   height: 100vh;

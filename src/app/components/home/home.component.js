@@ -4,11 +4,11 @@ var home = {
 };
 
 angular
-  .module('components.main')
+  .module('components.home')
   .component('home', home)
   .config(function ($stateProvider, $urlRouterProvider){
     $stateProvider
-      .state('main', {
+      .state('home', {
         url: '/',
         component: 'home'
       });
