@@ -1,4 +1,4 @@
 angular
-  .module('home', [
+  .module('view-parties', [
     'ui.router',
   ]);

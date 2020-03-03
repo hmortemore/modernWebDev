@@ -3,5 +3,5 @@ function HomeController() {
 }
 
 angular
-  .module('components.home')
-  .controller('HomeController')
+  .module('home')
+  .controller('HomeController', HomeController);

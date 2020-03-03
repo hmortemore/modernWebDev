@@ -1,10 +1,10 @@
 var home = {
   templateUrl: './home.html',
-  controller: 'HomeController'
+  controller: 'HomeController',  
 };
 
 angular
-  .module('components.home')
+  .module('home')
   .component('home', home)
   .config(function ($stateProvider, $urlRouterProvider){
     $stateProvider
