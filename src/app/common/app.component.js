@@ -6,7 +6,7 @@ var app = {
 angular
   .module('common')
   .component('app', app)
-  .config(function ($stateProvider) {
+  .config(function ($stateProvider, $locationProvider) {
     $stateProvider
       .state('app', {
         url: '/app',
@@ -14,5 +14,6 @@ angular
           requiredAuth: true
         },
         component: 'app'
-      })
+      });
+    $locationProvider.hashPrefix('');
   });
