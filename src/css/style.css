@@ -24,7 +24,7 @@ html, body {
 }
 
 #home {
-  background: url(/images/landing-background.png) no-repeat 50% 50%;
+  background: url(/img/landing-background.png) no-repeat 50% 50%;
   display: table;
   height: 100vh;
   width: 100%;
