@@ -4,7 +4,7 @@ var partyNew = {
 };
 
 angular
-  .module('components.plan')
+  .module('plan-party')
   .component('partyNew', partyNew)
   .config(function ($stateProvider) {
     $stateProvider

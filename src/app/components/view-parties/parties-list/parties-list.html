@@ -1,0 +1,16 @@
+<div class="container">
+
+  <!-- Search Bar -->
+  <div>
+    <br>
+    <input type="text" class="form-control col-4" id="searchInput" placeholder="Search" ng-model="searchInput">
+  </div>
+
+  <!-- Party Card for each party-->
+  <div class="row">
+    <div ng-repeat="party in $ctrl.parties | filter:searchInput" class="col-md-6 col-lg-4">
+      <party party="party"></party>
+    </div>
+  </div>
+
+</div>

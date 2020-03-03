@@ -1,5 +1,6 @@
 angular
 	.module('components', [
-		'components.home',
-		'components.plan',
+		'home',
+		'plan-party',
+		'view-parties',
 	]);

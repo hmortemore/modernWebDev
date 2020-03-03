@@ -1,4 +1,4 @@
 angular
-  .module('home', [
+  .module('plan-party', [
     'ui.router',
   ]);
