@@ -1,7 +1,7 @@
 function PartyService($http){
   return {
     getParties: function () {
-      return $http.get('../../database.json');
+      return $http.get('../json/database.json');
     }
   };
 }

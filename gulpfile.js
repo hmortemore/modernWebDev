@@ -80,7 +80,7 @@ gulp.task('styles', function () {
 gulp.task('watch', function() {
     livereload.listen();
     gulp.watch([styles, scripts, templates], function(event){
-        runSequence('clean', 'scripts', 'styles', 'copy-html', 'copy-img', 'copy-fonts', 'build_reload');
+        runSequence('clean', 'scripts', 'styles', 'copy-json', 'copy-html', 'copy-img', 'copy-fonts', 'build_reload');
     });
 });
 
@@ -194,6 +194,12 @@ gulp.task('copy-fonts', function () {
         .pipe(gulp.dest('dist/fonts'));
 });
 
+gulp.task('copy-json', function(){
+    return gulp
+        .src(['src/app/*.json'])
+        .pipe(gulp.dest('dist/json'));
+})
+
 // generate localhost server for docs
 gulp.task('connect-app', function () {
     connect.server({
@@ -206,9 +212,9 @@ gulp.task('connect-app', function () {
 });
 
 gulp.task('default', ['clean'], function (callback) {
-    runSequence('scripts', 'styles', 'copy-html', 'copy-img', 'copy-fonts', 'connect-app', 'watch', callback);
+    runSequence('scripts', 'styles', 'copy-json', 'copy-html', 'copy-img', 'copy-fonts', 'connect-app', 'watch', callback);
 });
 
 gulp.task('production', ['clean'], function (callback) {
-    runSequence('scripts', 'styles', 'copy-html', 'copy-img', 'copy-fonts', callback);
+    runSequence('scripts', 'styles', 'copy-json', 'copy-html', 'copy-img', 'copy-fonts', callback);
 });

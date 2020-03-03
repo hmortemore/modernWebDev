@@ -10,6 +10,7 @@ angular
     $stateProvider
       .state('party-new', {
         url: '/party-new',
-        component: 'partyNew'
+        component: 'partyNew',
+        parent: 'app'
       });
   });

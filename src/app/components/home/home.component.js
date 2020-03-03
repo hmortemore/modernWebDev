@@ -10,7 +10,8 @@ angular
     $stateProvider
       .state('home', {
         url: '/',
-        component: 'home'
+        component: 'home',
+        parent: 'app'
       });
     $urlRouterProvider.otherwise('/');
   });
