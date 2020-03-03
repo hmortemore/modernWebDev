@@ -13,5 +13,5 @@ angular
         component: 'home',
         parent: 'app'
       });
-    $urlRouterProvider.otherwise('/');
+    $urlRouterProvider.otherwise('/app/');
   });
