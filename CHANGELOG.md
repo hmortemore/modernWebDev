@@ -1,4 +1,4 @@
-## 0.2.0 (2020-03-03)
+## [0.2.0](https://github.com/hmortemore/modernWebDev/releases/tag/0.2.0) (2020-03-03)
 
 ### Features
 
