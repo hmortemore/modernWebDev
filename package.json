@@ -41,7 +41,9 @@
   },
   "dependencies": {
     "@uirouter/angularjs": "^1.0.10",
-    "@uirouter/visualizer": "^4.0.0"
+    "@uirouter/visualizer": "^4.0.0",
+	"angular-parse": "^0.2.2",
+    "parse": "^2.11.0"
   },
   "resolutions": {
     "graceful-fs": "4.2.3"
