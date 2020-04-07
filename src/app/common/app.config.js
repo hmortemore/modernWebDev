@@ -8,4 +8,4 @@ function config() {
 
 angular
   .module('common')
-  .run(config);
+  .config(config);

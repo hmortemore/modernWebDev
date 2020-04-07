@@ -41,6 +41,8 @@ class PartyModel {
       .catch(error => Promise.reject(error));
   }
 
+  //TODO: get all
+
 }
 
 angular
