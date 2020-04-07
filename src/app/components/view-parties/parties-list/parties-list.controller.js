@@ -1,8 +1,8 @@
 function PartiesListController(PartyModel) {
   var ctrl = this;
-  ctrl.$onInit = () => {
-      PartyModel.getParties().then(function(result){
-      ctrl.parties = result.data;
+  ctrl.$onInit = function(){
+    PartyModel.getAll().then(function(results){
+      ctrl.parties = results;
     });
   }
 }
