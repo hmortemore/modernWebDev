@@ -1,8 +1,10 @@
-function PartiesListController(PartyService) {
+function PartiesListController(PartyModel) {
   var ctrl = this;
-  PartyService.getParties().then(function(result){
-    ctrl.parties = result.data;
-  });
+  ctrl.$onInit = () => {
+      PartyModel.getParties().then(function(result){
+      ctrl.parties = result.data;
+    });
+  }
 }
 
 angular

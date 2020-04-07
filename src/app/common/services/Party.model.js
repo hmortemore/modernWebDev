@@ -6,13 +6,13 @@ class PartyModel {
     this.collection = [];
     this.name = 'Party';
     this.fields = [
-        'host',
-        'name',
-        'openToPublic',
-        'date',
-        'entryFee',
-        'location',
-        'maxCapacity'
+      'host',
+      'name',
+      'openToPublic',
+      'date',
+      'entryFee',
+      'location',
+      'maxCapacity'
     ];
   }
 
@@ -28,21 +28,23 @@ class PartyModel {
       this.Parse.defineAttributes(obj.host, this.UserModel.fields);
       return obj;
     }
-}
+  }
 
   getById(id) {
     return new this.Parse.Query(this.New())
       .get(id)
       .then(result => {
-          this.Parse.defineAttributes(result, this.fields);
-          this.data = result;
-          return Promise.resolve(result);
+        this.Parse.defineAttributes(result, this.fields);
+        this.data = result;
+        return Promise.resolve(result);
       })
       .catch(error => Promise.reject(error));
   }
 
+  //TODO: get all function
+
 }
 
 angular
-    .module('common')
-    .service('PartyModel', PartyModel);
+  .module('common')
+  .service('PartyModel', PartyModel);
