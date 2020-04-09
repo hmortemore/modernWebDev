@@ -1,16 +1,16 @@
 <div class="card text-center mt-3">
   <div class="card-body">
-    <h5 class="card-title">{{$ctrl.party.name}}</h5>
-    <p class="card-text">{{$ctrl.party.description}}</p>
+    <h5 class="card-title">{{$ctrl.party.attributes.name}}</h5>
+    <p class="card-text">{{$ctrl.party.attributes.description}}</p>
     <div class="row mb-2">
       <div class="col">
-        <p class="card-text"><i class="far fa-clock"></i> {{$ctrl.party.time}}</p>
+        <p class="card-text"><i class="far fa-clock"></i> {{$ctrl.party.attributes.time}}</p>
       </div>
       <div class="col">
-        <p class="card-text"><i class="far fa-calendar-alt"></i> {{$ctrl.party.date}}</p>
+        <p class="card-text"><i class="far fa-calendar-alt"></i> {{$ctrl.party.attributes.date}}</p>
       </div>
     </div>
-    <p class="card-text"><i class="fas fa-map-marker-alt"></i> {{$ctrl.party.address}}</p>
+    <p class="card-text"><i class="fas fa-map-marker-alt"></i> {{$ctrl.party.attributes.location}}</p>
     <a href="" class="btn btn-primary" role="button">Buy Ticket</a>
   </div>
 </div>
