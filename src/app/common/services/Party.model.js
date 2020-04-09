@@ -1,7 +1,7 @@
 class PartyModel {
   constructor(Parse) {
     this.Parse = Parse;
-    this.UserModel = UserModel;
+    this.UserModel = Parse.User; //UserModel;
     this.data = {};
     this.collection = [];
     this.name = 'Party';
@@ -41,7 +41,17 @@ class PartyModel {
       .catch(error => Promise.reject(error));
   }
 
-  //TODO: get all function
+  getAll(){
+    let Party = Parse.Object.extend("Party");
+    return new this.Parse.Query(Party)
+      .find()
+      .then(result => {
+        console.log(result);
+        this.data = result;
+        return Promise.resolve(result);
+      })
+      .catch(error => Promise.reject(error));
+  }
 
 }
 
