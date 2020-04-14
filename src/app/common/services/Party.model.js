@@ -43,7 +43,7 @@ class PartyModel {
 
   getAll(){
     let Party = Parse.Object.extend("Party");
-    return new this.Parse.Query(Party)
+    return new this.Parse.Query(this.New())
       .find()
       .then(result => {
         console.log(result);

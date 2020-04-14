@@ -3,4 +3,5 @@ angular
 		'home',
 		'plan-party',
 		'view-parties',
+		'party-details',
 	]);
