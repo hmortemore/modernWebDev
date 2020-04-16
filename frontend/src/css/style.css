@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700&display=swap');
+
+/* TODO: clean up styles, separate to different CSS files*/
+
+:root {
+  --main-bg-color: #1F2128;
+  --secondary-bg-color: #272B33;
+  --main-accent-color: #155E8E; /*#1DB075;*/
+  --secondary-accent-color: #0A4C78; /*179360;*/ 
+  --main-text-color: #6A6C7B;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  font-family: 'Lato', sans-serif;
+  color: #FFF;
+  background-color: var(--main-bg-color);
+}
+
+.navbar {
+  background-color: var(--secondary-bg-color);
+}
+
+#home {
+  background: url(/img/landing-background.png) no-repeat 50% 50%;
+  display: table;
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+}
+
+.landing-text{
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+
+h1 {
+  font-size: 700%;
+}
+
+h3 {
+  font-size: 250%;
+  font-weight: 500;
+}
+
+.btn-lg {
+  border-width: medium;
+  border-radius: 0;
+  padding: .6rem 1.3rem;
+  font-size: 1.1rem;
+  margin: 0 .5rem;
+}
+
+/* Party Card Styles */ 
+.card {
+  background-color: var(--secondary-bg-color);
+}
+
+.card-text {
+  color: var(--main-text-color);
+}
+
+.card-body .btn {
+  background-color: var(--main-accent-color);
+  border-color: var(--main-accent-color);
+}
+
+.card-body .btn:hover{
+  background-color: var(--secondary-accent-color);
+  border-color: var(--secondary-accent-color);
+}
+
+i {
+  color: var(--main-accent-color);
+}
+
+/* Plan party styles */
+input[type=text], input[type=text]:focus, textarea{
+  background-color: var(--secondary-bg-color);
+  background: var(--secondary-bg-color) !important;
+  color: white;
+}
+
+input[type=text]:focus{
+  box-shadow: none;
+  border: 0;
+  border: 2px solid var(--main-accent-color);
+}
+
+button[type=submit]{
+  background-color: var(--main-accent-color);
+  border-color: var(--main-accent-color);
+}
+
+button[type=submit]:hover{
+  background-color: var(--secondary-accent-color);
+  border-color: var(--secondary-accent-color);
+}
