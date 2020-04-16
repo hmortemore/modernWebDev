@@ -8,15 +8,19 @@ var gateway = braintree.connect({
   privateKey: "338a5ccd502216b412d782b03cb4c724"
 });
 
-// 
+// Generate a client token
 gateway.clientToken.generate({
-  customerId: aCustomerId
+  //customerId: 1
 }, function (err, response) {
   var clientToken = response.clientToken
+  //console.log(err);
+  //console.log(response);
+  console.log(clientToken);
 });
 
-app.get("/client_token", function (req, res) {
-  gateway.clientToken.generate({}, function (err, response) {
-    res.send(response.clientToken);
-  });
-});
+// Send a client token to your client
+//app.get("/client_token", function (req, res) {
+//  gateway.clientToken.generate({}, function (err, response) {
+//    res.send(response.clientToken);
+//  });
+//});
