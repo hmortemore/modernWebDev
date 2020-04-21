@@ -1,5 +1,7 @@
-// Install and configure
 var braintree = require("braintree");
+const express = require('express');
+
+const app = express();
 
 var gateway = braintree.connect({
   environment: braintree.Environment.Sandbox,
@@ -8,19 +10,13 @@ var gateway = braintree.connect({
   privateKey: "338a5ccd502216b412d782b03cb4c724"
 });
 
-// Generate a client token
-gateway.clientToken.generate({
-  //customerId: 1
-}, function (err, response) {
-  var clientToken = response.clientToken
-  //console.log(err);
-  //console.log(response);
-  console.log(clientToken);
+//Send a client token to your client
+app.get("/client_token", function (req, res) {
+ gateway.clientToken.generate({}, function (err, response) {
+   res.send(response.clientToken);
+ });
 });
 
-// Send a client token to your client
-//app.get("/client_token", function (req, res) {
-//  gateway.clientToken.generate({}, function (err, response) {
-//    res.send(response.clientToken);
-//  });
-//});
+//PORT
+const port = process.env.PORT || 8080;
+app.listen(port, () => console.log(`listening on port ${port}...`));

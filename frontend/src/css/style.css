@@ -99,3 +99,7 @@ button[type=submit]:hover{
   background-color: var(--secondary-accent-color);
   border-color: var(--secondary-accent-color);
 }
+
+.hidden{
+  display: none;
+}

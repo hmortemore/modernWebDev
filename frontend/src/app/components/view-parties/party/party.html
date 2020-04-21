@@ -11,6 +11,12 @@
       </div>
     </div>
     <p class="card-text"><i class="fas fa-map-marker-alt"></i> {{$ctrl.party.attributes.location}}</p>
-    <a href="" class="btn btn-primary" role="button">Buy Ticket</a>
+    <a href="" class="btn btn-primary" role="button" ng-click="$ctrl.togglePaymentWindow($event)">Buy Ticket</a>
+
+    <div class="payment-wrapper hidden">
+      <div id="dropin-container"></div>
+      <button id="submit-button" class="button button--small button--green">Purchase</button>
+    </div>
+
   </div>
 </div>
