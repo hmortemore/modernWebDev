@@ -7,7 +7,7 @@ function PartiesListController(PartyModel) {
     });
   }
 
-  /* var button = document.querySelector('#submit-button');
+  var button = document.querySelector('#submit-button');
 
   braintree.dropin.create({
     authorization: 'sandbox_g42y39zw_348pk9cgf3bgyw2b',
@@ -16,15 +16,10 @@ function PartiesListController(PartyModel) {
     button.addEventListener('click', function () {
       instance.requestPaymentMethod(function (err, payload) {
         // Submit payload.nonce to your server
+        console.log(payload.nonce);
       });
     })
   });
-
-  this.submitPayyment = function(err, instance) {
-    instance.requestPaymentMethod(function (err, payload) {
-      // Submit payload.nonce to your server
-    });
-  } */
 }
 
 angular

@@ -103,3 +103,7 @@ button[type=submit]:hover{
 .hidden{
   display: none;
 }
+
+.payment-wrapper{
+  margin-bottom: 500px;
+}
