@@ -1,7 +1,10 @@
 var braintree = require("braintree");
+const cors = require('cors');
 const express = require('express');
 
 const app = express();
+
+app.use(cors());
 
 var gateway = braintree.connect({
   environment: braintree.Environment.Sandbox,
