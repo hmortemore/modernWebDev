@@ -1,25 +1,22 @@
-var braintree = require("braintree");
-const cors = require('cors');
 const express = require('express');
 
 const app = express();
 
-app.use(cors());
+// custom routes
+const payment = require('./routes/payment');
 
-var gateway = braintree.connect({
-  environment: braintree.Environment.Sandbox,
-  merchantId: "ytkkgg7g4vbs9gbq",
-  publicKey: "728y26ysj56pkm22",
-  privateKey: "338a5ccd502216b412d782b03cb4c724"
+// base route
+app.get('/', (req, res) => {
+  res.status(200).send('Base route :)');
 });
 
-//Send a client token to your client
-app.get("/client_token", function (req, res) {
- gateway.clientToken.generate({}, function (err, response) {
-   res.send(response.clientToken);
- });
-});
+// register custom routes
+app.use('/payment', payment);
 
-//PORT
-const port = process.env.PORT || 8080;
-app.listen(port, () => console.log(`listening on port ${port}...`));
+const port = process.env.PORT || 1337;
+
+const httpServer = require('http').createServer(app);
+
+httpServer.listen(port, () => {
+  console.log('Listening on port ' + port);
+});

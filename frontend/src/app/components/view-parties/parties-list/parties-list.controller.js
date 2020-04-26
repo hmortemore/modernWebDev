@@ -6,8 +6,8 @@ function PartiesListController(PartyModel, $http) {
       ctrl.parties = results;
     });
 
-    $http.get('http://localhost:8080/client_token').then(function(response) {
-      console.log(response.data);
+    $http.get('http://localhost:1337/payment/client_token').then(function(response) {
+      console.log('client token: ' , response.data);
       const CLIENT_TOKEN_FROM_SERVER = response.data;
       var button = document.querySelector('#submit-button');
 
