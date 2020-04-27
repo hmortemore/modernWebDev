@@ -1,5 +1,9 @@
-function PartiesListController(PartyModel, $http) {
+function PartiesListController(PartyModel, $http, $scope) {
   var ctrl = this;
+
+  ctrl.selectedParty = {};
+
+  let button = document.querySelector('#submit-payment-button');
 
   ctrl.$onInit = function(){
     PartyModel.getAll().then(function(results){
@@ -7,9 +11,7 @@ function PartiesListController(PartyModel, $http) {
     });
 
     $http.get('http://localhost:1337/payment/client_token').then(function(response) {
-      console.log('client token: ' , response.data);
       const CLIENT_TOKEN_FROM_SERVER = response.data;
-      var button = document.querySelector('#submit-button');
 
       braintree.dropin.create({
         authorization: CLIENT_TOKEN_FROM_SERVER,
@@ -17,20 +19,35 @@ function PartiesListController(PartyModel, $http) {
       }, function (err, instance) {
         button.addEventListener('click', function () {
           instance.requestPaymentMethod(function (err, payload) {
-            $http.post('http://localhost:1337/payment/nonce', {nonce: payload.nonce}).then(function (response) {
+            let data = {
+              nonce: payload.nonce,
+              party: ctrl.selectedParty
+            };
+            $http.post('http://localhost:1337/payment/nonce', data).then(function (response) {
 
-              // This function handles success
-              
-              }, function (response) {
-              
-              // this function handles error
-              
-              });
-            console.log('Nonce: ', payload.nonce);
+              window.alert(`Successful payment of $${ctrl.selectedParty.entryFee} for ${ctrl.selectedParty.name}`);
+              ctrl.closePaymentWindow();
+
+            }, function (response) {
+            
+              window.alert('Unsuccessful payment. Please refresh and try again.');
+              ctrl.closePaymentWindow();
+            
+            });
           });
         })
       });
     });
+  }
+
+  $scope.$on('buyTicket', function(event, data) {
+    ctrl.selectedParty = data;
+  });
+
+  this.closePaymentWindow = () => {
+    document.getElementsByClassName('payment-modal')[0].classList.add('hidden');
+    document.getElementsByClassName('page-mask')[0].classList.add('hidden');
+    $scope.$emit('buyTicket', {});
   }
 }
 

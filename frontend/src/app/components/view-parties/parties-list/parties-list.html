@@ -7,8 +7,6 @@
     <br>
     <input type="text" class="form-control col-4" id="searchInput" placeholder="Search" ng-model="searchInput">
   </div>
-  
-  
 
   <!-- Party Card for each party-->
   <div class="row">
@@ -18,9 +16,13 @@
   </div>
 
   <!--Payment Modal-->
-  <div class="payment-wrapper hidden">
+  <div class="payment-modal hidden">
+    <h5>{{$ctrl.selectedParty.name}}: ${{$ctrl.selectedParty.entryFee}}</h5>
     <div id="dropin-container"></div>
-    <button id="submit-button" class="button button--small button--green">Purchase</button>
+    <a id="submit-payment-button" href="" class="btn btn-primary" role="button">Complete Purchase</a>
+    <span ng-click="$ctrl.closePaymentWindow()">&#9747</span>
   </div>
+
+  <div class="page-mask hidden"></div>
 
 </div>
