@@ -13,17 +13,15 @@ var gateway = braintree.connect({
 
 function createNonce(req, res) {
   var nonceFromTheClient = req.body.nonce;
-  console.log(nonceFromTheClient);
 
   gateway.transaction.sale({
-    amount: "10.00",
+    amount: req.body.party.entryFee,
     paymentMethodNonce: nonceFromTheClient,
     options: {
       submitForSettlement: true
     }
   }, function (err, result) {
-    console.log(result.transaction.status);
-    console.log(err);
+    result.success ? res.status(200).send() : res.status(400).send();
   });
 }
 

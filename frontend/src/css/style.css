@@ -63,12 +63,12 @@ h3 {
   color: var(--main-text-color);
 }
 
-.card-body .btn {
+.card-body .btn, .payment-modal .btn {
   background-color: var(--main-accent-color);
   border-color: var(--main-accent-color);
 }
 
-.card-body .btn:hover{
+.card-body .btn:hover, .payment-modal .btn:hover{
   background-color: var(--secondary-accent-color);
   border-color: var(--secondary-accent-color);
 }
@@ -104,6 +104,36 @@ button[type=submit]:hover{
   display: none;
 }
 
-.payment-wrapper{
-  margin-bottom: 500px;
+.payment-modal{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 5px 50px;
+  border-radius: 4px;
+  background-color: var(--main-text-color);
+  z-index: 100;
+}
+
+.payment-modal span{
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  color: var(--main-bg-color);
+  font-size: 150%;
+}
+
+.payment-modal span:hover {
+  cursor: pointer;
+  transform: scale(1.25);
+  color: rgb(133, 19, 19);
+}
+
+.page-mask {
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }

@@ -1,8 +1,10 @@
-function PartyController() {
+function PartyController($scope) {
   var ctrl = this;
 
-  this.togglePaymentWindow = () => {
-    document.getElementsByClassName('payment-wrapper')[0].classList.toggle('hidden');
+  this.openPaymentWindow = () => {
+    document.getElementsByClassName('payment-modal')[0].classList.remove('hidden');
+    document.getElementsByClassName('page-mask')[0].classList.remove('hidden');
+    $scope.$emit('buyTicket', this.party.attributes);
   } 
 }
 
