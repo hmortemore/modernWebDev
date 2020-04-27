@@ -5,7 +5,7 @@ const jsonParser = bodyParser.json();
 
 // controller modules
 const ClientTokenController = require('./client-token.controller');
-console.log(ClientTokenController.read);
+const NonceController = require('./nonce.controller');
 
 // security (CORS)
 router.use((req, res, next) => {
@@ -15,7 +15,11 @@ router.use((req, res, next) => {
   next();
 });
 
+router.use(jsonParser);
+
 // routes
 router.get("/client_token", ClientTokenController.read);
+
+router.post("/nonce", NonceController.create);
 
 module.exports = router;

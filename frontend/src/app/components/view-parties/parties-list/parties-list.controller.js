@@ -17,13 +17,20 @@ function PartiesListController(PartyModel, $http) {
       }, function (err, instance) {
         button.addEventListener('click', function () {
           instance.requestPaymentMethod(function (err, payload) {
-            // send payload.nonce to your server
+            $http.post('http://localhost:1337/payment/nonce', {nonce: payload.nonce}).then(function (response) {
+
+              // This function handles success
+              
+              }, function (response) {
+              
+              // this function handles error
+              
+              });
             console.log('Nonce: ', payload.nonce);
           });
         })
       });
     });
-
   }
 }
 
