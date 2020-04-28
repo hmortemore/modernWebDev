@@ -12,7 +12,14 @@
           {{$ctrl.party.attributes.date.getMonth() + 1}}/{{$ctrl.party.attributes.date.getDate()}}/{{$ctrl.party.attributes.date.getFullYear() - 2000}}</p>
       </div>
     </div>
-    <p class="card-text"><i class="fas fa-map-marker-alt"></i> {{$ctrl.party.attributes.location}}</p>
+    <div class="row mb-3">
+      <div class="col">
+        <p class="card-text"><i class="fas fa-map-marker-alt"></i> {{$ctrl.party.attributes.location}}</p>
+      </div>
+      <div class="col">
+        <p class="card-text"><i class="fa fa-money"></i> ${{$ctrl.party.attributes.entryFee}}</p>
+      </div>
+    </div>
     <a href="" class="btn btn-primary" role="button" ng-click="$ctrl.openPaymentWindow()">Buy Ticket</a>
 
   </div>
