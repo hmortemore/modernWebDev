@@ -4,10 +4,12 @@
     <p class="card-text">{{$ctrl.party.attributes.description}}</p>
     <div class="row mb-2">
       <div class="col">
-        <p class="card-text"><i class="far fa-clock"></i> {{$ctrl.party.attributes.time}}</p>
+        <p class="card-text"><i class="far fa-clock"></i> 
+          {{$ctrl.getTimeFormat($ctrl.party.attributes.date)}}</p>
       </div>
       <div class="col">
-        <p class="card-text"><i class="far fa-calendar-alt"></i> {{$ctrl.party.attributes.date}}</p>
+        <p class="card-text"><i class="far fa-calendar-alt"></i> 
+          {{$ctrl.party.attributes.date.getMonth() + 1}}/{{$ctrl.party.attributes.date.getDate()}}/{{$ctrl.party.attributes.date.getFullYear() - 2000}}</p>
       </div>
     </div>
     <p class="card-text"><i class="fas fa-map-marker-alt"></i> {{$ctrl.party.attributes.location}}</p>
