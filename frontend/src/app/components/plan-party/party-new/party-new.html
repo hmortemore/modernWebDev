@@ -1,6 +1,6 @@
 <div class="container">
   <!-- Plan Party Form -->
-  <form>
+  <form ng-submit="$ctrl.submitParty()">
     <div class="form-group">
       <label for="nameInput">Party Name</label>
       <input type="text" class="form-control" id="nameInput" ng-model="name">
@@ -11,17 +11,25 @@
     </div>
     <div class="form-group">
       <label for="dateInput">Date</label>
-      <input type="text" class="form-control" id="dateInput" ng-model="date">
+      <input type="date" class="form-control" id="dateInput" ng-model="date">
     </div>
     <div class="form-group">
-      <label for="timeInput">Time</label>
-      <input type="text" class="form-control" id="timeInput" ng-model="time">
+      <label for="locationInput">Location</label>
+      <input type="text" class="form-control" id="locationInput" ng-model="location">
     </div>
     <div class="form-group">
-      <label for="addressInput">Address</label>
-      <input type="text" class="form-control" id="addressInput" ng-model="address">
+      <label for="entryFeeInput">Entry Fee</label>
+      <input type="number" class="form-control" id="entryFeeInput" ng-model="entryFee">
     </div>
-    <button type="submit" class="btn btn-primary" ng-click="submitParty()">Submit Party</button>
+    <div class="form-group">
+      <label for="maxCapacityInput">Maximum Capacity</label>
+      <input type="number" class="form-control" id="maxCapacityInput" ng-model="maxCapacity">
+    </div>
+    <div class="form-group">
+      <label for="openToPublicInput">Open To Public</label>
+      <input type="checkbox" checked=true class="form-control" id="openToPublicInput" ng-model="openToPublic">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit Party</button>
   </form>
 
 </div>

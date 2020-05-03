@@ -5,7 +5,7 @@ class AttendeeModel {
     this.PartyModel = PartyModel;
     this.data = {};
     this.collection = [];
-    this.name = 'Party';
+    this.name = 'Attendee';
     this.fields = [
       'user',
       'party'

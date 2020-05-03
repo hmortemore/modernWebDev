@@ -12,7 +12,8 @@ class PartyModel {
       'date',
       'entryFee',
       'location',
-      'maxCapacity'
+      'maxCapacity',
+      'description'
     ];
   }
 
@@ -41,7 +42,7 @@ class PartyModel {
       .catch(error => Promise.reject(error));
   }
 
-  getAll(){
+  getAll() {
     let Party = Parse.Object.extend("Party");
     return new this.Parse.Query(this.New())
       .find()
@@ -53,6 +54,26 @@ class PartyModel {
       .catch(error => Promise.reject(error));
   }
 
+  addParty(newName, newOpenToPublic, newDate, newEntryFee, newLocation, newMaxCapacity, newDescription){
+    const Party = Parse.Object.extend("Party");
+    const newParty = new Party();
+    var newHost = new this.Parse.User; // Delete once auth work is done
+    newHost.setUsername("Test User"); // Delete once auth work is done
+    newHost.setPassword("test pass"); // Delete once auth work is done
+    newParty.set('host', newHost); // Change newHost to this.Parse.User.current() after authentication work is done
+    newParty.set('name', newName);
+    newParty.set('openTo{ublic', newOpenToPublic);
+    newParty.set('date', newDate);
+    newParty.set('entryFee', newEntryFee);
+    newParty.set('location', newLocation);
+    newParty.set('maxCapacity', newMaxCapacity);
+    newParty.set('description', newDescription);
+    newParty.save()
+      .then(result => {
+        return Promise.resolve(result);
+      })
+      .catch(error => Promise.reject(error));
+  }
 }
 
 angular
