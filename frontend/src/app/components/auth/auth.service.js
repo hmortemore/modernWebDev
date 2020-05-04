@@ -11,7 +11,7 @@ function AuthService(Parse) {
       .then(function (response) {
         authData = response;
         return authData;
-      })
+      });
   };
 
   this.login = function(user) {
@@ -20,9 +20,27 @@ function AuthService(Parse) {
       .then(function (response) {
         authData = response;
         return authData;
-      })
+      });
   };
-  
+
+  this.requireAuthentication = function(){
+    return Parse.User
+      .currentAsync()
+      .then(function(user){
+        authData = user;
+        return authData;
+    });
+  };
+
+  this.isAuthenticated = function(){
+    return !!authData;
+  };
+
+  this.getUser = function(){
+    if (authData){
+      return authData;
+    }
+  };
 }
 
 angular
