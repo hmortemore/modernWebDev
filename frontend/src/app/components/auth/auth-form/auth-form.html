@@ -1,19 +1,21 @@
 <form name="authForm" novalidate ng-submit="$ctrl.submitForm();">
-  <label>
-    <input 
+  <label class="auth_label">
+    <input
+      class="auth_input"
       type="text" 
       name="username"
       required="required" 
-      placeholder="Enter your username"
+      placeholder="Username"
       ng-model="$ctrl.user.username"
     />
   </label>
-  <label>
+  <label class="auth_label">
     <input 
+      class="auth_input"
       type="password" 
       name="password"
       required="required" 
-      placeholder="Enter your password"
+      placeholder="Password"
       ng-model="$ctrl.user.password"
     />
   </label>

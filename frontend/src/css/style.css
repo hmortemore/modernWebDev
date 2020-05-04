@@ -54,6 +54,43 @@ h3 {
   margin: 0 .5rem;
 }
 
+/* Authentication Styles */
+.auth {
+  text-align: center;
+  
+}
+.auth auth-form form {
+  position: absolute;
+  top: calc(50% - 75px);
+  left: calc(50% - 150px);
+  width: 300px;
+  height: 150px;
+}
+.auth_label {
+  width: 100%;
+  float: left;
+}
+.auth_input {
+  border: 2px solid var(--main-accent-color);
+  border-radius: 20px;
+  height: 40px;
+  width: 200px;
+  background-color: var(--secondary-bg-color);
+  padding-left: 10px;
+  outline: none;
+}
+.auth-button button {
+  color: white;
+  width: 100px;
+  border-radius: 10px;
+}
+.auth__info {
+  text-align: center; 
+  width: 100%;
+  position: absolute;
+  bottom: 10px; 
+}
+
 /* Party Card Styles */ 
 .card {
   background-color: var(--secondary-bg-color);
