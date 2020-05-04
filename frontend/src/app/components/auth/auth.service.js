@@ -23,6 +23,15 @@ function AuthService(Parse) {
       });
   };
 
+  this.logout = function(){
+    return Parse.User
+      .logOut()
+      .then(function(){
+        authData = null;
+        return authData;
+      });
+  };
+
   this.requireAuthentication = function(){
     return Parse.User
       .currentAsync()

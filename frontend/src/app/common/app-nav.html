@@ -1,6 +1,16 @@
 <!-- Navigation Bar -->
 <nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#"><i class="fas fa-home"></i> Party App</a>
+  <a class="navbar-brand" href="#"><i class="fas fa-home"></i> Party App</a>
+  <header class="header">
+    <div class="header__fixed">
+      <div class="header__logout">
+        Welcome {{ ::$ctrl.user.username }}&emsp; &emsp; &emsp;
+        <a href="" ng-click="$ctrl.onLogout();">
+          <span class="header__button">Log Out</span>
+        </a>
+      </div>
+    </div>
+  </header>
   </div>
 </nav>

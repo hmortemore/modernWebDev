@@ -1,14 +1,13 @@
 function AppController(AuthService, $state) {
   var ctrl = this;
   ctrl.user = AuthService.getUser();
-  console.log(ctrl.user);
-
-  //console.log(AuthService);
-  //if (Parse.User.current()){
-  //  console.log('logged in');
-  //} else {
-  //  console.log('not logged in');
-  //}
+  console.log(ctrl.user.username);
+  ctrl.logout = function(){
+    console.log('logging out now');
+    AuthService.logout().then(function(){
+      $state.go('auth.login');
+    });
+  };
 }
 
 angular
