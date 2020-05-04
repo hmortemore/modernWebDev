@@ -9,6 +9,7 @@ angular
   .config(function ($stateProvider, $locationProvider) {
     $stateProvider
       .state('app', {
+        redirectTo: 'home',
         url: '/app',
         data: {
           requiredAuth: true

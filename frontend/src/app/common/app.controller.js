@@ -1,5 +1,4 @@
-//function AppController(AuthService, $state) {
-function AppController($state) {
+function AppController(AuthService, $state) {
   var ctrl = this;
 }
 

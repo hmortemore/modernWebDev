@@ -4,4 +4,5 @@ angular
 		'plan-party',
 		'view-parties',
 		'party-details',
+		'components.auth'
 	]);
