@@ -148,10 +148,45 @@ button[type=submit]:hover{
   border-color: var(--secondary-accent-color);
 }
 
+.party-submitted{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 5px 50px;
+  border-radius: 4px;
+  background-color: var(--main-text-color);
+  z-index: 100;
+}
+
+.party-submitted span{
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  color: var(--main-bg-color);
+  font-size: 150%;
+}
+
+.party-submitted span:hover {
+  cursor: pointer;
+  transform: scale(1.25);
+  color: rgb(133, 19, 19);
+}
+
+.new-party-page-mask {
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
 .hidden{
   display: none;
 }
 
+/* Payment Styles */
 .payment-modal{
   position: absolute;
   top: 50%;
