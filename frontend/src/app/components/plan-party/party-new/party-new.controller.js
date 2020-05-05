@@ -14,7 +14,7 @@ function PartyNewController(PartyModel, $scope) {
     console.log($scope.location);
     console.log($scope.entryFee);
     console.log($scope.maxCapacity);
-    PartyModel.addParty($scope.name, $scope.openToPublic, $scope.date, $scope.entryFee, $scope.location, $scope.maxCapacity, $scope.description);
+    PartyModel.addParty($scope.name, $scope.openToPublic, $scope.date, $scope.time, $scope.entryFee, $scope.location, $scope.maxCapacity, $scope.description);
     this.openConfirmationWindow();
   }
 }

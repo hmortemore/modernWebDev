@@ -148,6 +148,10 @@ button[type=submit]:hover{
   border-color: var(--secondary-accent-color);
 }
 
+input:focus, textarea:focus{
+  color: white !important;
+}
+
 .party-submitted{
   position: absolute;
   top: 50%;

@@ -54,7 +54,7 @@ class PartyModel {
       .catch(error => Promise.reject(error));
   }
 
-  addParty(newName, newOpenToPublic, newDate, newEntryFee, newLocation, newMaxCapacity, newDescription){
+  addParty(newName, newOpenToPublic, newDate, newTime, newEntryFee, newLocation, newMaxCapacity, newDescription){
     const Party = Parse.Object.extend("Party");
     const newParty = new Party();
     //var newHost = new this.Parse.User; // Delete once auth work is done
@@ -62,7 +62,8 @@ class PartyModel {
     //newHost.setPassword("test pass"); // Delete once auth work is done
     newParty.set('host', this.Parse.User.current()); // Change newHost to this.Parse.User.current() after authentication work is done
     newParty.set('name', newName);
-    newParty.set('openTo{ublic', newOpenToPublic);
+    newParty.set('openToPublic', newOpenToPublic);
+    newParty.set('time', newTime)
     newParty.set('date', newDate);
     newParty.set('entryFee', newEntryFee);
     newParty.set('location', newLocation);
