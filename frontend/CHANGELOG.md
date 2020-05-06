@@ -1,3 +1,29 @@
+## [0.5.0](https://github.com/hmortemore/modernWebDev/releases/tag/0.5.0) (2020-05-05)
+
+### Features
+
+- **Authentication** - users now must register an account and sign in to access the app
+
+### Contributors
+
+[<img alt="a-giuliano" src="https://avatars1.githubusercontent.com/u/27093042?s=460&v=4" width="117">](https://github.com/a-giuoliano) |[<img alt="kieranmcd1023" src="https://avatars3.githubusercontent.com/u/60300526?s=460&v=4" width="117">](https://github.com/kieranmcd1023) | [<img alt="zspitzer20" src="https://avatars1.githubusercontent.com/u/34380670?s=460&v=4" width="117">](https://github.com/zspitzer20) | [<img alt="hmortemore" src="https://avatars3.githubusercontent.com/u/46977460?s=460&v=4" width="117">](https://github.com/hmortemore)
+:---: |:---: |:---: |:---:|
+[a-giuliano](https://github.com/a-giuoliano) | [kieranmcd1023](https://github.com/kieranmcd1023) | [zspitzer20](https://github.com/zspitzer20) | [hmortemore](https://github.com/hmortemore) |
+
+## [0.3.0](https://github.com/hmortemore/modernWebDev/releases/tag/0.3.0) (2020-04-27)
+
+### Features
+
+- **Database Integration** - app is now integrated with a Parse database to persist data
+- **BrainTree Payment Integration** - BrainTree is now integrated in the app so that party tickets can be purchased with a credit or debit card
+
+### Contributors
+
+[<img alt="a-giuliano" src="https://avatars1.githubusercontent.com/u/27093042?s=460&v=4" width="117">](https://github.com/a-giuoliano) |[<img alt="kieranmcd1023" src="https://avatars3.githubusercontent.com/u/60300526?s=460&v=4" width="117">](https://github.com/kieranmcd1023) | [<img alt="zspitzer20" src="https://avatars1.githubusercontent.com/u/34380670?s=460&v=4" width="117">](https://github.com/zspitzer20) | [<img alt="hmortemore" src="https://avatars3.githubusercontent.com/u/46977460?s=460&v=4" width="117">](https://github.com/hmortemore)
+:---: |:---: |:---: |:---:|
+[a-giuliano](https://github.com/a-giuoliano) | [kieranmcd1023](https://github.com/kieranmcd1023) | [zspitzer20](https://github.com/zspitzer20) | [hmortemore](https://github.com/hmortemore) |
+
+
 ## [0.2.0](https://github.com/hmortemore/modernWebDev/releases/tag/0.2.0) (2020-03-03)
 
 ### Features
